@@ -26,7 +26,7 @@ const playGame = (userChoice) => {
 
     if (userChoice === compChoice) {
         msg.innerHTML = "Draw!"
-        msg.style.color = "#414141"
+        msg.style.color = "darkblue"
 
     }
 
@@ -62,7 +62,7 @@ const showWinner = (userWin, compChoice) => {
     if (userWin) {
         userScore++;
         userScoreText.innerHTML = userScore;
-        msg.innerHTML = `You Win! Computer choosed ${compChoice}`
+        msg.innerHTML = `You Won! Computer choosed ${compChoice}`
         msg.style.color = "green"
     }
     else {
@@ -80,6 +80,7 @@ function resetGame() {
     userScoreText.innerHTML = userScore;
     compScoreText.innerHTML = compScore;
     msg.innerHTML = "Your Move"
+    msg.style.color = "#414141"
 }
 
 resetBtn.addEventListener("click", () => {
